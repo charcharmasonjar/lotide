@@ -1,4 +1,4 @@
-const assertEqual = function(actual, expected) {
+const assertEqual = function (actual, expected) {
   if (actual === expected) {
     console.log(`🥳🥳🥳 Assertion Passed: ${actual} === ${expected}`);
   } else if (actual !== expected) {
@@ -15,7 +15,7 @@ An array with only one element should yield an empty array for its tail
 An empty array should yield an empty array for its tail
 */
 
-const tail = function(array) {
+const tail = function (array) {
   let result = array.slice(1);
   return result;
 };
