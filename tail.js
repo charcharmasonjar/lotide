@@ -1,29 +1,33 @@
-const assertEqual = function (actual, expected) {
+// FUNCTION IMPLEMENTATION
+const assertEqual = function(actual, expected) {
   if (actual === expected) {
-    console.log(`🥳🥳🥳 Assertion Passed: ${actual} === ${expected}`);
-  } else if (actual !== expected) {
-    console.log(`😬😬😬 Assertion Failed: ${actual} !== ${expected}`);
+    console.log(`\uD83D\uDC83 Assertion Passed: ${actual} === ${expected}`);
+  } else {
+    console.log(`\uD83D\uDE14 Assertion Failed: "${actual}" !== "${expected}"`);
   }
 };
 
-/*
-Tail function which returns the "tail" of an array
-(everything except for the first item (head) of the provided array)
-Your function should not modify the array that is passed in.
-It should return a new array.
-An array with only one element should yield an empty array for its tail
-An empty array should yield an empty array for its tail
-*/
-
-const tail = function (array) {
-  let result = array.slice(1);
-  return result;
+const tail = function(arr1) {
+  let newArr = arr1.slice(1);
+  return newArr;
 };
 
-//testing out function
-console.log(tail([1, 2, 3]));
-console.log(tail([3]));
-console.log(tail([]));
-const words = [1, 3, 5];
-tail(words);
-assertEqual(words.length, 3);
+// Test Case 1: Check the returned array elements
+const result = tail(["Hello", "Lighthouse", "Labs"]);
+assertEqual(result.length, 2); // ensure we get back two elements
+assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
+assertEqual(result[1], "Labs"); // ensure second element is "Labs"
+
+// Test Case: Check the original array
+const words = ["Yo Yo", "Lighthouse", "Labs"];
+tail(words); // no need to capture the return value since we are not checking it
+assertEqual(words.length, 3); // original array should still have 3 elements!
+
+// Test Case 2: Check the returned array elements
+const words2 = ["Hi"];
+tail(words2); // no need to capture the return value since we are not checking it
+assertEqual(words2.length, 1); // original array should still have 3 elements!
+
+const words3 = [];
+tail(words3); // no need to capture the return value since we are not checking it
+assertEqual(words3.length, 0); // original array should still have 3 elements!
