@@ -20,7 +20,7 @@ const countOnly = function (allItems, itemsToCount) {
       }
     }
   }
-  console.log(results);
+  //console.log(results);
   return results;
 }
 
