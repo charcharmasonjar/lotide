@@ -21,7 +21,6 @@ const findKeyByValue = function (objectToSearch, valueToFind) {
       return key;
     }
   }
-  return undefined;
 };
 
 //test object and test code
@@ -31,6 +30,5 @@ const bestTVShowsByGenre = {
   drama: "The Wire"
 };
 
-console.log(findKeyByValue(bestTVShowsByGenre, "The Wire"));
-console.log(findKeyByValue(bestTVShowsByGenre, "The Expanse"));
-console.log(findKeyByValue(bestTVShowsByGenre, "That '70s Show"));
+assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
+assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
