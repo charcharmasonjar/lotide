@@ -15,5 +15,16 @@ const assertEqual = function (actual, expected) {
 
 //actual function
 //returns a value from a key value pair
-const findKeyByValue = function(objectToScan, valueToFind) {
-}
+const findKeyByValue = function (objectToSearch, valueToFind) {
+  for (let [key, value] of Object.entries(objectToSearch)) {
+    console.log(key, value);
+  }
+};
+
+const bestTVShowsByGenre = {
+  sci_fi: "The Expanse",
+  comedy: "Brooklyn Nine-Nine",
+  drama: "The Wire"
+};
+
+console.log(findKeyByValue(bestTVShowsByGenre));
