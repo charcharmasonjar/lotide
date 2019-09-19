@@ -14,13 +14,18 @@ To keep things simple, the callback should only be provided one value:
 The item in the array.
 */
 
-//THE AMAZING FUNCTION ITSELF
-
+//TAKEUNTIL FUNCTION
 const takeUntil = function(array, callback) {
-  
+  results = [];
+  for(let element of array) {
+    if (!callback(element)) {
+      results.push(element);
+    } else {
+      return results;
+    }
+  }
+  return results;
 }
-
-
 
 //CODE WE WILL USE TO TEST THE FUNCTION OUT
 const eqArrays = function (arr1, arr2) {
@@ -43,8 +48,9 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-
-
-
-
 //TEST CASES 
+const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
+const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
+
+assertArraysEqual(takeUntil(data1, x => x < 0), [ 1, 2, 5, 7, 2 ]);
+assertArraysEqual(takeUntil(data2, x => x === ','), [ 'I\'ve', 'been', 'to', 'Hollywood' ]);
