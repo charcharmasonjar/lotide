@@ -30,21 +30,5 @@ const bestTVShowsByGenre = {
   drama: "The Wire"
 };
 
-<<<<<<< 0304022ed35de98f50e637caf7d3c8cad3bd8cae
 assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
 assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
-=======
-const snacks = {
-  chocolate: "KitKat",
-  chips: "Miss Vickies",
-  fruit: "orange"
-};
-
-console.log(findKeyByValue(bestTVShowsByGenre, "The Wire"));
-
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
-
-assertEqual(findKeyByValue(snacks, "KitKat"), "chocolate");
-assertEqual(findKeyByValue(snacks, "orange"), "fruit");
->>>>>>> implemented finding key by value
