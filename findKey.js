@@ -8,9 +8,6 @@ If no key is found, then it should return undefined.
 //ACTUAL FUNCTION
 const findKey = function(object, callback) {
   for(let key in object) {
-    console.log("key is: ", key);
-    console.log("object.key is ", object[key]);
-    console.log("callback on object.key is ", callback(object[key]));
     if (callback(object[key])) {
       return key;
     }
