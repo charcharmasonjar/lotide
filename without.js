@@ -1,22 +1,10 @@
-//functions we will use to test without function
-const eqArrays = function (arr1, arr2) {
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false
-    }
-  }
-  return true;
-};
-
-const assertArraysEqual = function (actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log(`🥳🥳🥳 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`😰😰😰 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
-//actual function
+/* INSTRUCTIONS:
+Implement without which will return a subset of a given array,
+removing unwanted elements.
+This function should take in a source array and a itemsToRemove array. 
+It should return a new array with only those elements from source
+that are not present in the itemsToRemove array.
+*/
 
 const without = function (source, itemsToRemove) {
   let result = source;
@@ -31,7 +19,4 @@ const without = function (source, itemsToRemove) {
   return result;
 };
 
-//test cases
-console.log(without([1, 2, 3], [1]));
-console.log(without(["1", "2", "3"], [1, 2, "3"]));
-console.log(without([1, 2, 3, 4, 4, 5], [1, 4]));
+module.exports = without;

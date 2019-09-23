@@ -1,24 +1,18 @@
-const eqArrays = function (arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return "The arrays are not the same length.";
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+/*
+INSTRUCTIONS
+Implement takeUntil which will keep collecting items from a provided array
+until the callback provided returns a truthy value.
 
-const assertArraysEqual = function (array1, array2) {
-  if (eqArrays(array1, array2) === true) {
-    console.log(`\uD83D\uDC83 Assertion Passed: ${array1} === ${array2}`);
-  } else {
-    console.log(`\uD83D\uDE14 Assertion Failed: ${array1} !== ${array2}`);
-  }
+It will take in two parameters:
+  1. The array to work with
+  2. The callback (which Lodash calls "predicate")
 
-};
+The function will return a "slice of the array with elements taken from the beginning."
+It should keep going until the callback/predicate returns a truthy value.
 
+To keep things simple, the callback should only be provided one value: 
+The item in the array.
+*/
 
 const takeUntil = function (array, callback) {
   const results = [];
@@ -31,15 +25,17 @@ const takeUntil = function (array, callback) {
   return results;
 };
 
-const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
-const results1 = takeUntil(data1, x => x < 0);
-console.log(results1); // [ 1, 2, 5, 7, 2 ]
+// TESTS:
 
-console.log('---');
+// const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
+// const results1 = takeUntil(data1, x => x < 0);
+// console.log(results1); // [ 1, 2, 5, 7, 2 ]
 
-const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
-const results2 = takeUntil(data2, x => x === ',');
-console.log(results2); // [ 'I\'ve', 'been', 'to', 'Hollywood' ]
+// console.log('---');
 
-assertArraysEqual(results1, [1, 2, 5, 7, 2]);
-assertArraysEqual(results2, ['I\'ve', 'been', 'to', 'Hollywood']);
+// const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
+// const results2 = takeUntil(data2, x => x === ',');
+// console.log(results2); // [ 'I\'ve', 'been', 'to', 'Hollywood' ]
+
+
+module.exports = takeUntil;

@@ -12,4 +12,4 @@ const head = function(array) {
   return first;
 };
 
-module.exports = head
+module.exports = head;
