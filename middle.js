@@ -8,19 +8,11 @@ const eqArrays = function (arr1, arr2) {
   return true;
 };
 
-<<<<<<< 4c36902d8ecbefc0eecfbdc4bf60ef7f8ffa057a
 const assertArraysEqual = function (actual, expected) {
   if (eqArrays(actual, expected)) {
     console.log(`🥳🥳🥳 Assertion Passed: ${actual} === ${expected}`);
   } else {
     console.log(`😰😰😰 Assertion Failed: ${actual} !== ${expected}`);
-=======
-const assertArraysEqual = function(array1, array2) {
-  if (eqArrays(array1, array2) === true) {
-    console.log(`uD83DuDC83 Assertion Passed: ${array1} === ${array2}`);
-  } else {
-    console.log(`uD83DuDE14 Assertion Failed: ${array1} !== ${array2}`);
->>>>>>> checked with eslint
   }
 };
 
@@ -37,7 +29,6 @@ const middle = function (array) {
   }
 }
 
-<<<<<<< 4c36902d8ecbefc0eecfbdc4bf60ef7f8ffa057a
 //test code
 assertArraysEqual((middle([1])), []);
 assertArraysEqual((middle([1, 2])), []);
@@ -45,11 +36,3 @@ assertArraysEqual((middle([1, 2, 3])), [2]);
 assertArraysEqual((middle([1, 2, 3, 4])), [2, 3]);
 assertArraysEqual((middle([1, 2, 3, 4, 5])), [3]);
 assertArraysEqual((middle([1, 2, 3, 4, 5, 6])), [3, 4]);
-=======
-assertArraysEqual(test1, []);
-assertArraysEqual(test2, []);
-assertArraysEqual(test3, [2]);
-assertArraysEqual(test4, [3]);
-assertArraysEqual(test5, [2, 3]);
-assertArraysEqual(test6, [3, 4]);
->>>>>>> checked with eslint
