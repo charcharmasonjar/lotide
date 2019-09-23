@@ -12,8 +12,4 @@ const head = function(array) {
   return first;
 };
 
-//testing function out using assertEqual
-assertEqual(head([5,6,7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-assertEqual(head([]));
-assertEqual(head([5]), 5);
+module.exports = head
