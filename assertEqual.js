@@ -6,9 +6,6 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+module.exports = assertEqual;
 //testing the function out
 
-assertEqual("Light", "House");
-assertEqual("light", "light");
-assertEqual(1, 1);
-assertEqual(2, 1);
