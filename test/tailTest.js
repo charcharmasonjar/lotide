@@ -1,10 +1,5 @@
-// FUNCTION IMPLEMENTATION
-const assertEqual = require('./assertEqual');
-
-const tail = function(arr1) {
-  let newArr = arr1.slice(1);
-  return newArr;
-};
+const assertEqual = require('../assertEqual');
+const tail = require('../tail');
 
 // Test Case 1: Check the returned array elements
 const result = tail(["Hello", "Lighthouse", "Labs"]);
