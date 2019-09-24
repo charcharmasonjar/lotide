@@ -48,7 +48,7 @@ The following functions are currently implemented:
 
 * `head(array)`: takes in an array and returns the first item in the array (just the item, not the element as an array). An array with only one element returns that one element as its head. An empty array returns undefined as its head.
 
-* `letterPositions(string)`: takes in a string and returns an object containing each character in the string and an array of the indices where each character is found in the string. 
+* `letterPositions(string)`: takes in a string and returns an object containing each character in the string and an array of the indices where each character is found in the string.   
 
 * `map(array, callback)`: takes in an array to map and a callback function, and returns a new array based on the results of the callback function being called on each element in the array. 
 
